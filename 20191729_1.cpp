@@ -121,7 +121,8 @@ int main() {
     //ifstream과 ofstream을 이용해 파일입출력
     ifstream readfile("input.txt");
     ofstream writefile("output_20191729.txt");
-
+    writefile.precision(1);
+    writefile.setf(ios_base:: fixed, ios_base:: floatfield);
     if (readfile.is_open() && writefile.is_open()) {
         string target;
         while (readfile >> target) {
